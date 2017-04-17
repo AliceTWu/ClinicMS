@@ -5,6 +5,12 @@ import App from './App'
 import router from './router'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon.vue'
+import bootstrap from 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.css'
+
+Vue.component('icon', Icon)
 
 Vue.use(iView)
 Vue.config.productionTip = false
