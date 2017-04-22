@@ -20,29 +20,34 @@
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
         </form> -->
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-inverse navbar-inverse_wrapper">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Brand</a>
+                    <a class="navbar-brand" href="#">门诊系统</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Link</a></li>
+                        <li><a href="#">病人入口 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">访客&病人信息</a></li>
+                        <li><a href="#">专家团队</a></li>
+                        <li><a href="#">新闻</a></li>
+                        <li><a href="#">预约</a></li>
                     </ul>
                     <form class="navbar-form navbar-right">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
+                        <!-- <div class="form-group">
+                            <input type="text" class="form-control search-form" placeholder="请输入关键字...">
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default"></button> -->
+                        <Input v-model="value4" icon="android-search" placeholder="请输入关键字..." style="width: 250px" @on-click="handleSearch"></Input>
                     </form>
                     
                 </div>
@@ -50,13 +55,31 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
+        <header class="layout-header__wrapper">
+            <ul class="nav nav-tabs">
+              <li role="presentation" class="active">
+                <a href="#">Home</a>
+              </li>
+              <li role="presentation"><a href="#">Profile</a></li>
+              <li role="presentation"><a href="#">Messages</a></li>
+            </ul>
+            <div class="nav-panel">
+                aaa
+            </div>
+        </header>
     </div>
 </template>
 <script>
+
 export default {
     data() {
         return {
-            value4: ""
+            value4: "",
+        }
+    },
+    methods:{
+        handleSearch(){
+            alert("搜索")
         }
     }
 }

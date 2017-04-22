@@ -13,6 +13,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 Vue.component('icon', Icon)
 
 Vue.use(iView)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
